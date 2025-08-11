@@ -3,38 +3,25 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link
-    rel="icon"
-    type="image/svg+xml"
-    href="/vite.svg"
-  />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
+  <link rel="icon" type="image/svg+xml" href="/TODO/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TODO</title>
-  <script type="module" crossorigin src="/assets/index-DW7O1Nop.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-jMX_K7F8.css">
+  <link href="https://cdn.skypack.dev/sanitize.css" rel="stylesheet" />
+  <script type="module" crossorigin src="/TODO/assets/index-DoIICPkK.js"></script>
+  <link rel="stylesheet" crossorigin href="/TODO/assets/index-C36f8I-r.css">
 </head>
 
 <body>
-  <div
-    id="todo-app"
-    class="todo_app"
-  >
-    <h1>My TODO List</h1>
+<div id="todo-app" class="todo_app">
+  <h1>My TODO List</h1>
 
-    <input
-      id="task-input"
-      type="text"
-      placeholder="Добавить задачу"
-    >
+  <div class="todo_form">
+    <input id="task-input" type="text" placeholder="Добавить задачу" />
     <button id="add-btn">Добавить</button>
-    <ul id="task-list">
-    </ul>
   </div>
 
-
+  <ul id="task-list"></ul>
+</div>
+
 </body>
-
 </html>
