@@ -1,0 +1,9 @@
+(function(){const o=document.createElement("link").relList;if(o&&o.supports&&o.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))r(e);new MutationObserver(e=>{for(const s of e)if(s.type==="childList")for(const t of s.addedNodes)t.tagName==="LINK"&&t.rel==="modulepreload"&&r(t)}).observe(document,{childList:!0,subtree:!0});function n(e){const s={};return e.integrity&&(s.integrity=e.integrity),e.referrerPolicy&&(s.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?s.credentials="include":e.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function r(e){if(e.ep)return;e.ep=!0;const s=n(e);fetch(e.href,s)}})();document.addEventListener("DOMContentLoaded",()=>{const c=document.getElementById("task-input"),o=document.getElementById("add-btn"),n=document.getElementById("task-list");s();const r=()=>{const t=c.value.trim();if(!t)return;if([...n.querySelectorAll("span")].some(l=>l.textContent===t)){alert("Есть такая задачка");return}const i=document.createElement("li");i.innerHTML=`
+  <span>${t}</span>
+  <button class="delete-btn"> Удалить </button>
+  `,n.appendChild(i),c.value="",e()};o.addEventListener("click",r),c.addEventListener("keypress",t=>{t.key==="Enter"&&r()}),n.addEventListener("click",t=>{t.target.tagName==="SPAN"?(t.target.classList.toggle("completed"),e()):t.target.classList.contains("delete-btn")&&(t.target.parentElement.remove(),e())});function e(){const t=[];n.querySelectorAll("li").forEach(a=>{const i=a.querySelector("span");t.push({text:i.textContent,completed:i.classList.contains("completed")})}),localStorage.setItem("tasks",JSON.stringify(t))}function s(){const t=JSON.parse(localStorage.getItem("tasks"))||[];n.innerHTML=t.map(a=>`
+    <li>
+    <span class="${a.completed?"completed":""}">${a.text}</span>
+    <button class="delete-btn"> Удалить </button>
+    </li>
+    `).join("")}});
