@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Обратная связь</title>
+
+    <link rel="icon" type="image/svg+xml" href="/poezdok-net-js/vite.svg" />
+    <link href="https://cdn.skypack.dev/sanitize.css" rel="stylesheet" />
+    <script type="module" crossorigin src="/poezdok-net-js/assets/index-3xRUZL8T.js"></script>
+    <link rel="stylesheet" crossorigin href="/poezdok-net-js/assets/index-aSn14ckY.css">
+  </head>
+  <body>
+    <header>
+      <div class="PageName">
+        <h1><b>Обратная связь</b></h1>
+      </div>
+
+      <nav class="menu">
+        <a class="button" href="#">Главная</a>
+        <a class="button" href="#">Галерея</a>
+        <a class="button" href="#">Список сайтов</a>
+        <a class="button" href="#">Примеры дока</a>
+        <a class="button" href="#">Об авторе</a>
+      </nav>
+    </header>
+
+    <main>
+      <div>
+        <h2 style="text-align: center">Poezdok.net - сервис оценки снг туризма</h2>
+      </div>
+
+      <div style="min-width: 600px">
+        <form id="form" style="margin-bottom: 1.25rem">
+          <table style="margin: 0 auto 1rem" class="form-table-field">
+            <tr>
+              <td>
+                <label for="country-select">Страна</label>
+              </td>
+              <td>
+                <select name="country" id="country-select" required>
+                  <option value="">-- Выберите страну --</option>
+                  <option value="russia">Россия</option>
+                  <option value="poland">Польша</option>
+                  <option value="kazakhstan">Казахстан</option>
+                  <option value="georgia" disabled>Грузия</option>
+                </select>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <label for="city-select">Город</label>
+              </td>
+              <td>
+                <select name="city" id="city-select" required>
+                  <option value="">-- Выберите город --</option>
+                </select>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <label for="travel-date">Дата поездки</label>
+              </td>
+              <td>
+                <input type="date" name="date" id="travel-date" required />
+              </td>
+            </tr>
+          </table>
+
+          <div style="display: flex; justify-content: center; column-gap: 0.5rem">
+            <button type="submit">Отправить</button>
+            <input type="button" id="clear-table" value="Очистить таблицу" />
+          </div>
+        </form>
+
+        <table id="table">
+          <thead>
+            <tr>
+              <td>№</td>
+              <td>Страна</td>
+              <td>Город</td>
+              <td>Дата</td>
+            </tr>
+          </thead>
+
+          <tbody></tbody>
+        </table>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <time class="card__date" datetime="2024-12-08">8 Декабря 2024г.</time>
+      </div>
+    </footer>
+
+  </body>
+</html>
