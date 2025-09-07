@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   
-  <title>Главная | Ekk Aud</title>
+  <title>Контакты | Ekk Aud</title>
   <!-- <meta name="description" content=""> Добавить описание-->
   
   <meta property="og:locale" content="ru_RU" />
@@ -17,7 +17,13 @@
   <!-- <link rel="icon" type="image/svg+xml" href="" /> Добавить фавиконку -->
   <style>
     .page_cover {
-      background-image: url('/ekk-aud/images/7197bb_4ded9e54251544fa8a826372b71e05e9~mv2.jpg');
+      background-image: url('/ekk-aud/images/7197bb_68e8cb4a3cb3404984f54552a534da67~mv2-1920w.jpg');
+    }
+
+    @media screen and (min-width: 1920px) {
+      .page_cover {
+        background-image: url('/ekk-aud/images/7197bb_68e8cb4a3cb3404984f54552a534da67~mv2.jpg');
+      }
     }
   </style>
   <link rel="stylesheet" crossorigin href="/ekk-aud/assets/style-U49v7OlR.css">
@@ -61,16 +67,18 @@
           <h1 class="page_brand__text">Аудиторская фирма<br />«Экк – Ауд»</h1>
         </div>
       </section>
-      <section class="page_cover"></section>
+      <section class="page_cover">
+        <h2 class="page_cover__caption">Контакты</h2>
+      </section>
 
       <section class="page_header">
         <h3 class="page_header__title">
-          Обязательный аудит<br>Инициативный аудит<br>Налоговый аудит и планирование
+          Всегда рады ответить на ваши вопросы:
         </h3>
       </section>
 
-      <section class="page_description">
-        <div class="container">
+      <section class="contacts_description">
+        <div class="container-md">
           <div class="section_header">
             <div class="section_header__line"></div>
           
@@ -84,7 +92,7 @@
               height="23"
             />
           
-            <h3 class="section_header__title">Почему Вам стоит обратиться к нам?</h3>
+            <h3 class="section_header__title">Адрес</h3>
           
             <img
               class="section_header__image"
@@ -98,21 +106,93 @@
           
             <div class="section_header__line"></div>
           </div>
-          <div class="page_description__text">
-            <p>
-              Каждому клиенту компания «Экк-Ауд» гарантирует: индивидуальный подход, высокое качество оказываемых
-              услуг, полную конфиденциальность информации, привлекательное ценообразование, выполнение работ в
-              установленные сроки. Работы могут производится разово или выполняться на постоянной основе.
-            </p>
-            <p>
-              Наши специалисты подходят комплексно к любой проблеме клиента, прорабатывая до малейших деталей
-              ключевые моменты бизнеса. Мы не только проведем аудит предприятия, но и выявим всевозможные налоговые
-              и финансовые риски и дадим рекомендации по их устранению. С нами, Ваш бизнес будет защищен и
-              подготовлен для перехода на новый уровень.
+          <div class="contacts_description__info">
+            <span class="contacts_description__info__phone">Телефон: 8-(38-46)-66-71-78</span>
+
+            <p class="contacts_description__info__address">
+              Адрес: 653004, Кемеровская область
+              <br />
+              г. Прокопьевск, пр-т Гагарина, 26, оф. 409
+              <br />
+              ekk-aud@mail.ru
             </p>
           </div>
 
-          <a href="#" class="page_description__link" >Найти работу >></a>
+          <div class="contacts_description__map">
+            <iframe
+              loading="lazy"
+              allowfullscreen=""
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15577.70668123897!2d86.62819666321573!3d53.87117356927422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42d0a8bb5228b601%3A0xb5cb0ed021b6caf8!2z0K3QutC6LdCQ0YPQtCwg0LDRg9C00LjRgtC-0YDRgdC60LDRjyDRhNC40YDQvNCw!5e0!3m2!1sru!2sru!4v1757231441942!5m2!1sru!2sru"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section class="contacts_write">
+        <div class="container-md">
+          <img
+            width="157"
+            height="34"
+            src="/ekk-aud/images/5eeee2_39369fb07ed04df2b2f7bb4140031627.png"
+            alt="5eeee2_39369fb07ed04df2b2f7bb4140031627.png"
+            decoding="async"
+          />
+
+          <form action="/" method="post" class="contacts_write__form">
+            <div class="contacts_write__form__fields">
+              <div class="contacts_write__form__left">
+                <input
+                  type="text"
+                  name="name"
+                  class="contacts_write__form__input"
+                  placeholder="Имя"
+                  aria-invalid="false"
+                  maxlength="100"
+                  autocomplete="off"
+                  aria-required="false"
+                  required=""
+                />
+
+                <input
+                  type="email"
+                  name="email"
+                  class="contacts_write__form__input"
+                  placeholder="Эл. почта"
+                  aria-invalid="false"
+                  pattern="^.+@.+\.[a-zA-Z]{2,63}$"
+                  maxlength="250"
+                  autocomplete="off"
+                  required=""
+                />
+
+                <input
+                  type="tel"
+                  name="phone"
+                  class="contacts_write__form__input"
+                  placeholder="Телефон"
+                  aria-invalid="false"
+                  maxlength="50"
+                  autocomplete="off"
+                  aria-required="false"
+                  required=""
+                />
+              </div>
+
+              <div class="contacts_write__form__right">
+                <textarea
+                  name="message"
+                  class="contacts_write__form__textarea"
+                  placeholder="Добавьте сообщение..."
+                  aria-required="false"
+                  aria-invalid="false"
+                  required=""
+                ></textarea>
+              </div>
+            </div>
+
+            <input class="contacts_write__submit" type="submit" value="Отправить" />
+          </form>
         </div>
       </section>
     </main>
