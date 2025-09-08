@@ -1,13 +1,13 @@
 {
-  "_main-BYsCeG-F.css": {
-    "file": "assets/main-BYsCeG-F.css",
-    "src": "_main-BYsCeG-F.css"
+  "_main-Dk8JbvzL.css": {
+    "file": "assets/main-Dk8JbvzL.css",
+    "src": "_main-Dk8JbvzL.css"
   },
-  "_main-tngJ4_hS.js": {
-    "file": "assets/main-tngJ4_hS.js",
+  "_main-yzu4V497.js": {
+    "file": "assets/main-yzu4V497.js",
     "name": "main",
     "css": [
-      "assets/main-BYsCeG-F.css"
+      "assets/main-Dk8JbvzL.css"
     ]
   }
 }
