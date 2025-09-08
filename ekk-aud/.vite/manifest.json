@@ -1,13 +1,13 @@
 {
-  "_main-BmrOFRAY.css": {
-    "file": "assets/main-BmrOFRAY.css",
-    "src": "_main-BmrOFRAY.css"
+  "_main-BYsCeG-F.css": {
+    "file": "assets/main-BYsCeG-F.css",
+    "src": "_main-BYsCeG-F.css"
   },
-  "_main-Df4AqWqY.js": {
-    "file": "assets/main-Df4AqWqY.js",
+  "_main-tngJ4_hS.js": {
+    "file": "assets/main-tngJ4_hS.js",
     "name": "main",
     "css": [
-      "assets/main-BmrOFRAY.css"
+      "assets/main-BYsCeG-F.css"
     ]
   }
 }
