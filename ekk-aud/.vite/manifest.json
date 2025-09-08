@@ -1,6 +1,13 @@
 {
-  "_style-U49v7OlR.css": {
-    "file": "assets/style-U49v7OlR.css",
-    "src": "_style-U49v7OlR.css"
+  "_main-BmrOFRAY.css": {
+    "file": "assets/main-BmrOFRAY.css",
+    "src": "_main-BmrOFRAY.css"
+  },
+  "_main-Df4AqWqY.js": {
+    "file": "assets/main-Df4AqWqY.js",
+    "name": "main",
+    "css": [
+      "assets/main-BmrOFRAY.css"
+    ]
   }
 }
