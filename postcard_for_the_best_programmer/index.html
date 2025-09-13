@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>С Днём Программиста!</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Courier New', monospace;
+      background: #0a0a0a;
+      color: #0f0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .card {
+      width: 90%;
+      max-width: 600px;
+      background: rgba(10, 20, 30, 0.8);
+      border: 2px solid #0f0;
+      border-radius: 10px;
+      padding: 30px;
+      text-align: center;
+      position: relative;
+      z-index: 10;
+      box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+      animation: glow 2s infinite alternate;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #0f0;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    .code-snippet {
+      background: #001100;
+      padding: 15px;
+      border-radius: 5px;
+      margin: 20px 0;
+      text-align: left;
+      font-family: 'Courier New', monospace;
+      overflow: hidden;
+      white-space: nowrap;
+      border-left: 3px solid #0f0;
+    }
+
+    .typing-animation {
+      animation: typing 4s steps(40) 1s forwards;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 25px;
+      background: transparent;
+      color: #0f0;
+      border: 2px solid #0f0;
+      border-radius: 5px;
+      cursor: pointer;
+      font-family: 'Courier New', monospace;
+      font-size: 1rem;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .button:hover {
+      background: #0f0;
+      color: #000;
+      box-shadow: 0 0 15px #0f0;
+    }
+
+    .binary-rain {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .binary {
+      position: absolute;
+      color: rgba(0, 255, 0, 0.7);
+      font-size: 18px;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(100vh);
+      }
+    }
+
+    @keyframes glow {
+      from {
+        box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+      }
+
+      to {
+        box-shadow: 0 0 20px rgba(0, 255, 0, 0.6), 0 0 30px rgba(0, 255, 0, 0.4);
+      }
+    }
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+
+      to {
+        width: 100%;
+      }
+    }
+
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #0f0;
+      opacity: 0.7;
+      z-index: 5;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="binary-rain" id="binaryRain"></div>
+
+  <div class="card">
+    <h1>С Днём Программиста!</h1>
+
+    <p>Пусть ваш код всегда будет чистым,<br>
+      Баги исчезают сами,<br>
+      Процессор не перегревается,<br>
+      А идеи приходят сразу!</p>
+
+    <div class="code-snippet">
+      <div class="typing-animation">
+        while (!world.isPerfect()) {<br>
+        &nbsp;&nbsp;world.improve();<br>
+        &nbsp;&nbsp;console.log("С Днём Программиста!");<br>
+        }
+      </div>
+    </div>
+
+    <p>Желаем продуктивной работы,<br>
+      Интересных проектов<br>
+      И понимающих заказчиков!</p>
+
+    <button class="button" id="celebrateBtn">Отпраздновать!</button>
+  </div>
+
+  <script>
+    // Создаем падающий двоичный дождь
+    function createBinaryRain() {
+      const binaryRain = document.getElementById('binaryRain');
+      const characters = '0101010101010101';
+
+      for (let i = 0; i < 50; i++) {
+        const binary = document.createElement('div');
+        binary.className = 'binary';
+        binary.textContent = characters.charAt(Math.floor(Math.random() * characters.length));
+        binary.style.left = Math.random() * 100 + 'vw';
+        binary.style.animationDuration = (Math.random() * 5 + 5) + 's';
+        binary.style.opacity = Math.random() * 0.5 + 0.3;
+        binary.style.fontSize = (Math.random() * 10 + 14) + 'px';
+        binaryRain.appendChild(binary);
+      }
+    }
+
+    // Создаем конфетти при нажатии на кнопку
+    function createConfetti() {
+      for (let i = 0; i < 100; i++) {
+        const confetti = document.createElement('div');
+        confetti.className = 'confetti';
+        confetti.style.left = Math.random() * 100 + 'vw';
+        confetti.style.top = -10 + 'vh';
+        confetti.style.backgroundColor = `hsl(${Math.random() * 120 + 60}, 100%, 50%)`;
+        confetti.style.width = (Math.random() * 10 + 5) + 'px';
+        confetti.style.height = (Math.random() * 10 + 5) + 'px';
+
+        document.body.appendChild(confetti);
+
+        // Анимация падения
+        const animation = confetti.animate([
+          { transform: `translate(0, 0) rotate(0deg)`, opacity: 1 },
+          { transform: `translate(${Math.random() * 200 - 100}px, 100vh) rotate(${Math.random() * 360}deg)`, opacity: 0 }
+        ], {
+          duration: Math.random() * 3000 + 2000,
+          easing: 'cubic-bezier(0.1, 0.8, 0.3, 1)'
+        });
+
+        // Удаляем элемент после завершения анимации
+        animation.onfinish = () => confetti.remove();
+      }
+    }
+
+    // Инициализация
+    document.addEventListener('DOMContentLoaded', () => {
+      createBinaryRain();
+
+      // Добавляем обработчик для кнопки
+      document.getElementById('celebrateBtn').addEventListener('click', createConfetti);
+    });
+  </script>
+</body>
+
+</html>
